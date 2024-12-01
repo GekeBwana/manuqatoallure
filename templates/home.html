@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Manuqato Allure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Manuqato Allure</h1>
+            <p>Your Ultimate Destination for Luxury Perfumes</p>
+            <a href="{{ url_for('products') }}" class="cta-button">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('products') }}">Products</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <h2>Exclusive Collections</h2>
+            <p>Shop our curated selection of luxury perfumes from around the globe.</p>
+        </div>
+        <div class="feature-card">
+            <h2>Unmatched Quality</h2>
+            <p>Every scent is crafted with care and precision to leave a lasting impression.</p>
+        </div>
+        <div class="feature-card">
+            <h2>Customer Satisfaction</h2>
+            <p>Your happiness is our top priority—explore with confidence.</p>
+        </div>
+    </section>
+</body>
+</html>

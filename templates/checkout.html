@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Checkout Page</h1>
+    <form action="{{ url_for('checkout') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <h3>Items:</h3>
+        <label>
+            <input type="checkbox" name="items" value="item1-10"> Item 1 ($10)
+        </label><br>
+        <label>
+            <input type="checkbox" name="items" value="item2-20"> Item 2 ($20)
+        </label><br>
+        <label>
+            <input type="checkbox" name="items" value="item3-30"> Item 3 ($30)
+        </label><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>

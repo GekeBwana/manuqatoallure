@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Results - Manuqato Allure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Manuqato Allure</h1>
+        </div>
+        <nav class="nav">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('products') }}">Products</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Search Results -->
+    <main>
+        <h2>Search Results for "{{ query }}"</h2>
+        {% if results %}
+            <div class="product-grid">
+                {% for product in results %}
+                <div class="product-card">
+                    <h3>{{ product.name }}</h3>
+                    <p>KSh {{ product.price }}</p>
+                    <p>{{ product.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No results found for "{{ query }}".</p>
+        {% endif %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Manuqato Allure | Your Luxury Perfume Store</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Manuqato Allure</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <h1>Our Exclusive Perfume Collections</h1>
+    </header>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='images/perfume1_frequence_oriental.jpg') }}" alt="Frequence Oriental">
+            <h2>Frequence Oriental</h2>
+            <p>Experience the richness of warm, woody, and oriental notes for a timeless allure.</p>
+            <a href="#" class="cta-button">Buy Now</a>
+            <a href="details_oriental.html" class="details-link">Learn More</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='images/perfume2_frequence_fruity_floral.jpg') }}" alt="Frequence Fruity Floral">
+            <h2>Frequence Fruity Floral</h2>
+            <p>A vibrant blend of fruity and floral notes, perfect for bright, unforgettable moments.</p>
+            <a href="#" class="cta-button">Buy Now</a>
+            <a href="details_fruity_floral.html" class="details-link">Learn More</a>
+        </div>
+
+        <!-- Add more products as needed -->
+    </section>
+
+    <!-- Back to Home Link -->
+    <div class="back-to-home">
+        <a href="{{ url_for('home') }}">← Back to Home</a>
+    </div>
+</body>
+</html>

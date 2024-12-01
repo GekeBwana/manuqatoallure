@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Manuqato Allure</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>About Manuqato Allure</h1>
+        <p>Your journey into the world of luxury fragrances starts here.</p>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="about-card">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Manuqato Allure Logo">
+            <h2>Our Vision</h2>
+            <p>
+                At Manuqato Allure, we believe that every scent tells a unique story. 
+                Our mission is to redefine luxury by offering fragrances that inspire confidence, elegance, and individuality.
+            </p>
+        </div>
+        <div class="about-card">
+            <img src="{{ url_for('static', filename='images/perfume1_frequence_oriental.jpg') }}" alt="Luxury Perfume">
+            <h2>Our Craft</h2>
+            <p>
+                Every bottle is an art form, carefully designed and blended to perfection. 
+                We collaborate with the finest perfumers to deliver timeless classics and innovative new blends.
+            </p>
+        </div>
+        <div class="about-card">
+            <img src="{{ url_for('static', filename='images/perfume2_frequence_fruity_floral.jpg') }}" alt="Fruity Floral Perfume">
+            <h2>Our Journey</h2>
+            <p>
+                Since our inception, Manuqato Allure has grown into a symbol of sophistication and quality, 
+                trusted by customers who value excellence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Back to Home Link -->
+    <div class="back-to-home">
+        <a href="{{ url_for('home') }}">← Back to Home</a>
+    </div>
+</body>
+</html>
